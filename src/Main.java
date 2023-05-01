@@ -30,24 +30,24 @@ public class Main {
             }
             return salaryCosts;
         }
-        public static int minSalary(Employee[] worker) {
-            int min=worker[0].getSalary();
-            for (Employee employee : worker) {
-                if (employee.getSalary() < min) {
-                    min = employee.getSalary();
-                }
+    public static Employee minSalary(Employee[] worker) {
+        Employee min = worker[0];
+        for (Employee employee : worker) {
+            if (employee.getSalary() < min.getSalary()) {
+                min = employee;
             }
-            return min;
         }
-        public static int maxSalary(Employee[] worker) {
-            int max=worker[0].getSalary();
-            for (Employee employee : worker) {
-                if (employee.getSalary() > max) {
-                    max = employee.getSalary();
-                }
+        return min;
+    }
+    public static Employee maxSalary(Employee[] worker) {
+        Employee max = worker[0];
+        for (Employee employee : worker) {
+            if (employee.getSalary() < max.getSalary()) {
+                max = employee;
             }
-            return max;
         }
+        return max;
+    }
 
         public static int averageSalary(Employee[] worker) {
             int salaryCosts=0;
