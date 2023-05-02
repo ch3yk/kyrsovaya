@@ -23,12 +23,22 @@ public class Employee {
         return department;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setSalary(int salary) {
+
         this.salary = salary;
     }
 
     public void setDepartment(int department) {
+
         this.department = department;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String toString() {
